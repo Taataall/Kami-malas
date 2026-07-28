@@ -3,6 +3,7 @@ import Link from "next/link";
 const navigationItems = [
   { href: "/", label: "Beranda" },
   { href: "/profil", label: "Profiles" },
+  { href: "/portofolio/bukutamu", label: "Buku Tamu" },
   { href: "/portofolio/talitha-sakhi", label: "Karya Talitha" },
   { href: "/portofolio/nayla-marzuqa-amidita", label: "Karya Nayla" },
 ];
