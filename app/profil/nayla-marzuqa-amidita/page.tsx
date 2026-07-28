@@ -25,6 +25,7 @@ export default function NaylaProfilePage() {
           <div>
             <p className="nayla-intro">Hi, nama saya Nayla. Seorang UI/UX designer dengan hobby menggambar. Yuk intip karya saya!</p>
             <Link className="nayla-work-button" href={`/portofolio/${nayla.slug}`}>Karya Ku <span aria-hidden="true">&rarr;</span></Link>
+            <Link className="nayla-work-button profile-secondary-button" href="/portofolio/bukutamu">Buku Tamu <span aria-hidden="true">&rarr;</span></Link>
             <p className="nayla-contact">Contact:<br />0857-5781-0763</p>
           </div>
           <aside className="nayla-skills" aria-label="Skill Nayla">

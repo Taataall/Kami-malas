@@ -3,9 +3,11 @@ import Link from "next/link";
 const navigationItems = [
   { href: "/", label: "Beranda" },
   { href: "/profil", label: "Profiles" },
-  { href: "/portofolio/bukutamu", label: "Buku Tamu" },
+  { href: "/profil/talitha-sakhi", label: "Profil Talitha" },
+  { href: "/profil/nayla-marzuqa-amidita", label: "Profil Nayla" },
   { href: "/portofolio/talitha-sakhi", label: "Karya Talitha" },
   { href: "/portofolio/nayla-marzuqa-amidita", label: "Karya Nayla" },
+  { href: "/portofolio/bukutamu", label: "Buku Tamu" },
 ];
 
 export function Navbar() {

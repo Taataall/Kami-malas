@@ -39,6 +39,14 @@ export default async function PortfolioPage({
           <div>
             <p className="member-role">{member.role}</p>
             <p className="intro">{member.portfolio.description}</p>
+            <div className="portfolio-action-row">
+              <Link className="member-work-link" href={`/profil/${member.slug}`}>
+                Profil <span aria-hidden="true">&rarr;</span>
+              </Link>
+              <Link className="member-work-link secondary-link" href="/portofolio/bukutamu">
+                Buku Tamu <span aria-hidden="true">&rarr;</span>
+              </Link>
+            </div>
           </div>
         </div>
         <section className="content-grid" aria-label={`Karya ${member.name}`}>
@@ -63,6 +71,10 @@ function TalithaWorks() {
         <Link className="works-back" href="/profil/talitha-sakhi">&larr; Profil Talitha</Link>
         <p className="works-kicker">Selected Works</p>
         <h1 id="works-title">Karya Talitha</h1>
+        <div className="works-link-row">
+          <Link className="member-work-link" href="/profil/talitha-sakhi">Profil Talitha</Link>
+          <Link className="member-work-link secondary-link" href="/portofolio/bukutamu">Buku Tamu</Link>
+        </div>
         <div className="talitha-projects">
           <article className="work-item work-mobile-app">
             <div className="app-mockup" aria-label="Preview proyek aplikasi mobile">
@@ -91,6 +103,10 @@ function NaylaWorks() {
       <section className="nayla-works-content" aria-labelledby="nayla-works-title">
         <Link className="nayla-works-back" href="/profil/nayla-marzuqa-amidita">&larr; Profil Nayla</Link>
         <h1 id="nayla-works-title" className="sr-only">Karya Nayla</h1>
+        <div className="nayla-works-links">
+          <Link className="member-work-link" href="/profil/nayla-marzuqa-amidita">Profil Nayla</Link>
+          <Link className="member-work-link secondary-link" href="/portofolio/bukutamu">Buku Tamu</Link>
+        </div>
         <article className="nayla-work nayla-uiux-work">
           <h2>UI/UX</h2>
           <div className="nayla-work-frame">

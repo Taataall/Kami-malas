@@ -31,6 +31,9 @@ export default function TalithaProfilePage() {
             <Link className="talitha-work-button" href={`/portofolio/${talitha.slug}`}>
               Karya Ku <span aria-hidden="true">&rarr;</span>
             </Link>
+            <Link className="talitha-work-button profile-secondary-button" href="/portofolio/bukutamu">
+              Buku Tamu <span aria-hidden="true">&rarr;</span>
+            </Link>
             <p className="talitha-contact">Contact: 0859-3000-6423</p>
           </div>
           <aside className="talitha-skills" aria-label="Skill Talitha">

@@ -25,6 +25,10 @@ export default function BukuTamuPage() {
         <Link className="guestbook-back" href="/profil">
           &larr; Kembali ke profil
         </Link>
+        <nav className="guestbook-quick-links" aria-label="Pintasan portofolio">
+          <Link href="/portofolio/talitha-sakhi">Karya Talitha</Link>
+          <Link href="/portofolio/nayla-marzuqa-amidita">Karya Nayla</Link>
+        </nav>
         <p className="guestbook-kicker">Portfolio Guestbook</p>
         <h1 id="guestbook-title">Buku Tamu</h1>
 

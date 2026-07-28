@@ -1,3 +1,5 @@
+import Link from "next/link";
+
 export default function Home() {
   return (
     <main className="welcome-page">
@@ -13,6 +15,20 @@ export default function Home() {
           <h1 id="welcome-title">Welcome</h1>
           <p>to our page!</p>
         </div>
+        <nav className="main-navigation" aria-label="Navigasi halaman awal">
+          <Link className="nav-button profile-button" href="/profil">
+            Profiles
+          </Link>
+          <Link className="nav-button portfolio-button" href="/portofolio/talitha-sakhi">
+            Karya Talitha
+          </Link>
+          <Link className="nav-button portfolio-button" href="/portofolio/nayla-marzuqa-amidita">
+            Karya Nayla
+          </Link>
+          <Link className="nav-button guestbook-button" href="/portofolio/bukutamu">
+            Buku Tamu
+          </Link>
+        </nav>
       </section>
     </main>
   );

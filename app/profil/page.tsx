@@ -27,16 +27,27 @@ export default function ProfilPage() {
               />
               <div className="member-card-content">
                 <h2>{member.name}</h2>
-                <Link
-                  className="member-work-link"
-                  href={`/profil/${member.slug}`}
-                >
-                  Lihat Profil <span aria-hidden="true">&rarr;</span>
-                </Link>
+                <div className="member-action-row">
+                  <Link
+                    className="member-work-link"
+                    href={`/profil/${member.slug}`}
+                  >
+                    Profil <span aria-hidden="true">&rarr;</span>
+                  </Link>
+                  <Link
+                    className="member-work-link secondary-link"
+                    href={`/portofolio/${member.slug}`}
+                  >
+                    Karya <span aria-hidden="true">&rarr;</span>
+                  </Link>
+                </div>
               </div>
             </article>
           ))}
         </section>
+        <Link className="guestbook-cta" href="/portofolio/bukutamu">
+          Isi Buku Tamu <span aria-hidden="true">&rarr;</span>
+        </Link>
       </div>
     </main>
   );

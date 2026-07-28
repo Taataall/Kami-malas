@@ -97,6 +97,7 @@ body {
 .nav-button:hover, .nav-button:focus-visible { transform: translate(-4px, -4px); box-shadow: 5px 5px 0 rgba(25,80,109,.28); outline: 3px solid #fff; outline-offset: 3px; }
 .profile-button { background: var(--lime); }
 .portfolio-button { background: var(--sky-strong); }
+.guestbook-button { background: #286bd2; }
 
 .dot-field { position: absolute; z-index: 0; width: 51vw; height: 47vh; opacity: .9; background-image: radial-gradient(#fff 1.55px, transparent 1.8px); background-size: 8px 8px; mask-image: linear-gradient(135deg, transparent 2%, #000 40%, transparent 88%); }
 .dot-field-top { top: 6%; right: -4%; transform: rotate(-12deg); }
@@ -122,6 +123,11 @@ body {
 .member-role { margin: 0; color: var(--ink); font-family: var(--font-geist-mono), monospace; font-size: .72rem; font-weight: 800; letter-spacing: .08em; text-transform: uppercase; }
 .member-work-link { background: var(--lime); color: white; display: inline-block; font-family: var(--font-geist-mono), monospace; font-weight: 900; letter-spacing: -.04em; padding: 11px 15px; text-decoration: none; text-transform: uppercase; transition: transform .18s ease, box-shadow .18s ease; }
 .member-work-link:hover, .member-work-link:focus-visible { box-shadow: 4px 4px 0 rgba(25,80,109,.35); outline: 3px solid white; outline-offset: 3px; transform: translate(-3px, -3px); }
+.member-action-row, .portfolio-action-row, .works-link-row { display: flex; flex-wrap: wrap; gap: 10px; }
+.member-action-row { justify-content: center; }
+.secondary-link { background: var(--sky-strong); }
+.guestbook-cta { background: #286bd2; box-shadow: 6px 6px 0 rgba(117,197,239,.55); color: white; display: inline-block; font-family: var(--font-geist-mono), monospace; font-weight: 900; letter-spacing: -.04em; margin-top: 30px; padding: 13px 18px; text-decoration: none; text-transform: uppercase; transition: transform .18s ease, box-shadow .18s ease; }
+.guestbook-cta:hover, .guestbook-cta:focus-visible { box-shadow: 4px 4px 0 rgba(25,80,109,.35); outline: 3px solid white; outline-offset: 3px; transform: translate(-3px, -3px); }
 .portfolio-member { align-items: center; display: flex; gap: 20px; margin: 35px 0 10px; }
 .portfolio-avatar { border: 5px solid white; border-radius: 50%; height: 130px; object-fit: cover; width: 130px; }
 .portfolio-member .intro { margin: 5px 0 0; }
@@ -174,6 +180,7 @@ body {
 .talitha-intro { color: #286bd2; font-family: var(--font-geist-mono), monospace; font-size: clamp(.94rem, 1.8vw, 1.22rem); font-weight: 900; line-height: 1.52; margin: 0; max-width: 610px; text-transform: uppercase; }
 .talitha-work-button { background: #bce800; color: white; display: inline-block; font-family: var(--font-geist-mono), monospace; font-size: 1.3rem; font-weight: 900; letter-spacing: -.08em; margin-top: 15px; padding: 13px 35px; text-decoration: none; text-transform: uppercase; transition: transform .18s ease, box-shadow .18s ease; }
 .talitha-work-button:hover, .talitha-work-button:focus-visible { box-shadow: 5px 5px 0 rgba(44,103,206,.4); outline: 3px solid white; outline-offset: 3px; transform: translate(-3px, -3px); }
+.profile-secondary-button { background: #286bd2; margin-left: 10px; }
 .talitha-contact { color: #286bd2; font-family: var(--font-geist-mono), monospace; font-size: 1rem; font-weight: 900; letter-spacing: -.05em; margin: 15px 0 0; text-transform: uppercase; }
 .talitha-skills { align-self: end; padding-bottom: 12px; }
 .talitha-skills h2 { color: white; font-family: var(--font-geist-mono), monospace; font-size: 1.45rem; letter-spacing: -.08em; margin: 0 0 12px; text-transform: uppercase; }
@@ -213,6 +220,7 @@ body {
 .works-back { text-decoration-thickness: 2px; text-underline-offset: 4px; }
 .works-kicker { margin: 35px 0 0; }
 .talitha-works-content > h1 { color: white; font-family: var(--font-geist-mono), monospace; font-size: clamp(3.2rem, 9vw, 6.5rem); letter-spacing: -.12em; line-height: .85; margin: 5px 0 30px; text-shadow: -3px -3px 0 #3275dd, 3px -3px 0 #3275dd, -3px 3px 0 #3275dd, 3px 3px 0 #3275dd; text-transform: uppercase; }
+.works-link-row { margin: -14px 0 26px; }
 .talitha-projects { align-items: end; display: grid; gap: 28px; grid-template-columns: minmax(0, 1.35fr) minmax(230px, .8fr); }
 .work-item { position: relative; }
 .work-item h2 { color: white; font-family: var(--font-geist-mono), monospace; font-size: clamp(1.8rem, 4.8vw, 3.7rem); letter-spacing: -.1em; line-height: .9; margin: 18px 0 0; text-align: center; text-shadow: -2px -2px 0 #3275dd, 2px -2px 0 #3275dd, -2px 2px 0 #3275dd, 2px 2px 0 #3275dd; text-transform: uppercase; }
@@ -251,6 +259,7 @@ body {
 .nayla-works-page::before { background-image: radial-gradient(rgba(255,255,255,.34) 1px, transparent 1.5px); background-size: 12px 12px; content: ""; inset: 0; opacity: .42; position: absolute; }
 .nayla-works-content { margin: 0 auto; max-width: 780px; min-height: 555px; position: relative; z-index: 1; }
 .nayla-works-back { color: #286ed9; font-family: var(--font-geist-mono), monospace; font-size: .74rem; font-weight: 900; letter-spacing: .07em; text-decoration-thickness: 2px; text-underline-offset: 4px; text-transform: uppercase; }
+.nayla-works-links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; margin-top: 12px; position: relative; z-index: 3; }
 .sr-only { height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; clip: rect(0, 0, 0, 0); white-space: nowrap; }
 .nayla-work { position: absolute; }.nayla-work h2 { color: white; font-family: var(--font-geist-mono), monospace; font-size: clamp(1.9rem, 4.8vw, 3.7rem); letter-spacing: -.12em; line-height: .85; margin: 0 0 8px 28px; text-shadow: -2px -2px 0 #3174df, 2px -2px 0 #3174df, -2px 2px 0 #3174df, 2px 2px 0 #3174df; text-transform: uppercase; }
 .nayla-uiux-work { left: 0; top: 42px; width: min(565px, 76%); }.nayla-work-frame { background: #bce5fb; border: 11px solid #bce5fb; border-radius: 17px; overflow: hidden; }.nayla-work-frame img { display: block; height: auto; width: 100%; }
@@ -263,6 +272,9 @@ body {
 .guestbook-content { margin: 0 auto; max-width: 880px; position: relative; z-index: 1; }
 .guestbook-back, .guestbook-kicker, .guestbook-form label, .guestbook-form button, .guestbook-messages li span { font-family: var(--font-geist-mono), monospace; font-weight: 900; text-transform: uppercase; }
 .guestbook-back { color: #286bd2; display: inline-block; font-size: .76rem; letter-spacing: .07em; text-decoration-thickness: 2px; text-underline-offset: 4px; }
+.guestbook-quick-links { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 14px; }
+.guestbook-quick-links a { background: #75c5ef; color: white; font-family: var(--font-geist-mono), monospace; font-size: .78rem; font-weight: 900; padding: 9px 12px; text-decoration: none; text-transform: uppercase; }
+.guestbook-quick-links a:hover, .guestbook-quick-links a:focus-visible { background: #286bd2; outline: 3px solid white; outline-offset: 2px; }
 .guestbook-kicker { color: white; font-size: .76rem; letter-spacing: .12em; margin: 35px 0 8px; }
 .guestbook-content h1 { background: #bce800; box-shadow: 11px 0 0 #75c5ef; color: white; display: inline-block; font-family: var(--font-geist-mono), monospace; font-size: clamp(3rem, 8vw, 6.3rem); font-weight: 900; letter-spacing: -.11em; line-height: .85; margin: 0 0 34px; padding: 18px 24px; text-transform: uppercase; }
 .guestbook-form { background: rgba(255,255,255,.84); border: 4px solid white; box-shadow: 9px 9px 0 rgba(40,107,210,.22); max-width: 760px; padding: 22px; }
@@ -298,6 +310,7 @@ body {
   .talitha-profile-card { padding: 20px 20px 25px; }
   .talitha-header { align-items: flex-start; flex-direction: column; gap: 22px; }
   .talitha-main-content { grid-template-columns: 1fr; padding: 0; }
+  .profile-secondary-button { margin-left: 0; }
   .talitha-skills { align-self: start; }
   .nayla-profile-page { padding: 18px 12px; }
   .nayla-profile-card { min-height: 0; padding: 20px; }
