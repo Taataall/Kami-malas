@@ -1,8 +1,19 @@
 export default function Home() {
   return (
-    <main style={{ padding: '20px' }}>
-      <h1>Selamat Datang di Team Pemalas</h1>
-      {/* Menu Navigasi (Langkah 2) akan ditaruh di bawah ini nanti */}
+    <main className="welcome-page">
+      <div className="dot-field dot-field-top" aria-hidden="true" />
+      <div className="dot-field dot-field-bottom" aria-hidden="true" />
+      <div className="lime-glow" aria-hidden="true" />
+      <div className="blue-block" aria-hidden="true" />
+      <div className="sparkle" aria-hidden="true">✦</div>
+
+      <section className="welcome-content" aria-labelledby="welcome-title">
+        <p className="eyebrow">TEAM PEMALAS</p>
+        <div className="title-panel">
+          <h1 id="welcome-title">Welcome</h1>
+          <p>to our page!</p>
+        </div>
+      </section>
     </main>
   );
 }
