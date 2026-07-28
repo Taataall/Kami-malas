@@ -115,7 +115,8 @@ body {
 .info-card { background: rgba(255,255,255,.88); border: 3px solid #fff; padding: 22px; box-shadow: 7px 7px 0 rgba(117,197,239,.7); }
 .info-card h2 { color: var(--ink); font-family: var(--font-geist-mono), monospace; font-size: 1rem; margin: 0 0 12px; text-transform: uppercase; }
 .info-card p { margin: 0; line-height: 1.5; }
-.project-like { align-items: center; display: flex; flex-wrap: wrap; gap: 9px; margin-top: 15px; }
+.project-like { align-items: center; background: rgba(255,255,255,.92); border: 3px solid white; box-shadow: 5px 5px 0 rgba(40,107,210,.24); display: flex; flex-wrap: wrap; gap: 9px; padding: 9px; }
+.inline-like { margin-top: 15px; }
 .project-like button { background: #286bd2; border: 2px solid white; color: white; cursor: pointer; font-family: var(--font-geist-mono), monospace; font-size: .82rem; font-weight: 900; padding: 9px 13px; text-transform: uppercase; transition: transform .18s ease, box-shadow .18s ease; }
 .project-like button:hover, .project-like button:focus-visible { box-shadow: 4px 4px 0 rgba(25,80,109,.35); outline: 3px solid white; outline-offset: 2px; transform: translate(-3px, -3px); }
 .project-like span { color: #286bd2; font-family: var(--font-geist-mono), monospace; font-size: .8rem; font-weight: 900; text-transform: uppercase; }
@@ -230,8 +231,8 @@ body {
 .talitha-projects { align-items: end; display: grid; gap: 28px; grid-template-columns: minmax(0, 1.35fr) minmax(230px, .8fr); }
 .work-item { position: relative; }
 .work-item h2 { color: white; font-family: var(--font-geist-mono), monospace; font-size: clamp(1.8rem, 4.8vw, 3.7rem); letter-spacing: -.1em; line-height: .9; margin: 18px 0 0; text-align: center; text-shadow: -2px -2px 0 #3275dd, 2px -2px 0 #3275dd, -2px 2px 0 #3275dd, 2px 2px 0 #3275dd; text-transform: uppercase; }
-.work-item .project-like { justify-content: center; }
-.work-item .project-like span, .nayla-work .project-like span { color: white; text-shadow: 1px 1px 0 #286bd2; }
+.work-item .project-like { justify-content: center; position: absolute; right: 14px; top: 14px; z-index: 4; }
+.work-item .project-like span, .nayla-work .project-like span { color: #286bd2; text-shadow: none; }
 .work-item .popular-label, .nayla-work .popular-label { text-align: center; }
 .app-mockup { background: #1d1c1d; border: 14px solid #b9e4fb; border-radius: 34px; color: #f5dfbd; height: 305px; overflow: hidden; padding: 18px 30px; position: relative; }
 .app-mockup::after { background: #fff7df; content: ""; height: 127px; position: absolute; right: 104px; top: 22px; width: 42px; }
@@ -271,7 +272,7 @@ body {
 .nayla-works-links { display: flex; flex-wrap: wrap; gap: 10px; justify-content: flex-end; margin-top: 12px; position: relative; z-index: 3; }
 .sr-only { height: 1px; margin: -1px; overflow: hidden; padding: 0; position: absolute; width: 1px; clip: rect(0, 0, 0, 0); white-space: nowrap; }
 .nayla-work { position: absolute; }.nayla-work h2 { color: white; font-family: var(--font-geist-mono), monospace; font-size: clamp(1.9rem, 4.8vw, 3.7rem); letter-spacing: -.12em; line-height: .85; margin: 0 0 8px 28px; text-shadow: -2px -2px 0 #3174df, 2px -2px 0 #3174df, -2px 2px 0 #3174df, 2px 2px 0 #3174df; text-transform: uppercase; }
-.nayla-work .project-like { justify-content: flex-end; margin-top: 10px; }
+.nayla-work .project-like { justify-content: flex-end; position: absolute; right: 14px; top: 58px; z-index: 5; }
 .nayla-uiux-work { left: 0; top: 42px; width: min(565px, 76%); }.nayla-work-frame { background: #bce5fb; border: 11px solid #bce5fb; border-radius: 17px; overflow: hidden; }.nayla-work-frame img { display: block; height: auto; width: 100%; }
 .nayla-drawing-work { right: 0; top: 275px; width: min(414px, 58%); z-index: 2; }.nayla-drawing-work h2 { margin-left: auto; margin-right: 4px; text-align: right; transform: translateY(-8px); }.nayla-drawing-frame { background: white; border: 11px solid #bce5fb; border-radius: 0 0 17px 17px; box-shadow: 12px 12px 0 rgba(52,115,221,.2); overflow: hidden; }.nayla-drawing-frame img { display: block; height: 255px; object-fit: cover; object-position: center 42%; width: 100%; }
 .nayla-works-dots { background-image: radial-gradient(#bce800 2.3px, transparent 2.6px); background-size: 11px 11px; height: 270px; opacity: .88; position: absolute; width: 270px; }.nayla-works-dots-top { left: -84px; mask-image: radial-gradient(circle at 55% 45%, #000 0 50%, transparent 76%); top: -75px; }.nayla-works-dots-bottom { background-image: radial-gradient(#2e72dd 1.5px, transparent 1.8px); background-size: 8px 8px; bottom: -78px; mask-image: radial-gradient(circle at 45% 45%, #000 0 50%, transparent 76%); right: -78px; }.nayla-works-blob { background: radial-gradient(ellipse at 25% 60%, #bce800 0 5%, transparent 6% 100%); bottom: -40px; height: 330px; left: -80px; opacity: .75; position: absolute; transform: rotate(-20deg); width: 330px; }
@@ -336,6 +337,7 @@ body {
   .app-mockup::after { right: 46px; }
   .nayla-works-content { min-height: 0; padding-top: 28px; }
   .nayla-work { position: static; width: 100%; }
+  .nayla-work .project-like { justify-content: center; margin-top: 10px; position: static; }
   .nayla-drawing-work { margin-top: 28px; max-width: none; }
   .nayla-drawing-work h2 { margin-right: 0; transform: none; }
   .guestbook-page { padding-top: 92px; }

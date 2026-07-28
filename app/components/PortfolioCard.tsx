@@ -31,6 +31,7 @@ export function PortfolioCard({ title, children }: PortfolioCardProps) {
         jumlahLike={jumlahLike}
         sudahLike={sudahLike}
         tanganiKlikLike={tanganiKlikLike}
+        className="inline-like"
       />
     </article>
   );
@@ -63,18 +64,20 @@ type ProjectLikeControlsProps = {
   jumlahLike: number;
   sudahLike: boolean;
   tanganiKlikLike: () => void;
+  className?: string;
 };
 
 function ProjectLikeControls({
   jumlahLike,
   sudahLike,
   tanganiKlikLike,
+  className = "",
 }: ProjectLikeControlsProps) {
   return (
-    <div className="project-like">
+    <div className={`project-like ${className}`}>
       {jumlahLike >= 5 && <p className="popular-label">Proyek Terpopuler!</p>}
       <button type="button" onClick={tanganiKlikLike}>
-        {sudahLike ? "Batal Suka" : "Suka"}
+        {sudahLike ? "Unlike" : "Like"}
       </button>
       <span>{jumlahLike} like</span>
     </div>
