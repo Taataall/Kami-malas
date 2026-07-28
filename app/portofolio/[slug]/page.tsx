@@ -1,7 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
 import { notFound } from "next/navigation";
-import { PortfolioCard } from "../../components/PortfolioCard";
+import { PortfolioCard, ProjectLikeButton } from "../../components/PortfolioCard";
 import { getMemberBySlug, members } from "../../data/members";
 
 export function generateStaticParams() {
@@ -81,12 +81,14 @@ function TalithaWorks() {
               <Image className="work-image" src="/talitha-namiri-mobile-app.png" alt="Mockup aplikasi Namiri" width={510} height={306} />
             </div>
             <h2>Mobile App</h2>
+            <ProjectLikeButton />
           </article>
           <article className="work-item work-character-card">
             <div className="character-card" aria-label="Preview proyek character card">
               <Image className="work-image" src="/talitha-zhuxin-character-card.png" alt="Character card Zhuxin" width={238} height={371} />
             </div>
             <h2>Character Card</h2>
+            <ProjectLikeButton />
           </article>
         </div>
       </section>
@@ -112,12 +114,14 @@ function NaylaWorks() {
           <div className="nayla-work-frame">
             <Image src="/nayla-gallery-batik-lontara.png" alt="Desain UI/UX Gallery Batik Lontara" width={552} height={254} />
           </div>
+          <ProjectLikeButton />
         </article>
         <article className="nayla-work nayla-drawing-work">
           <h2>Gambar</h2>
           <div className="nayla-drawing-frame">
             <Image src="/nayla-oc-illustration.jpg" alt="Ilustrasi karakter orisinal Nayla" width={2048} height={2048} />
           </div>
+          <ProjectLikeButton />
         </article>
       </section>
     </main>
