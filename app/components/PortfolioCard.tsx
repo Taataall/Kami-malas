@@ -13,13 +13,15 @@ export function PortfolioCard({ title, children }: PortfolioCardProps) {
   const [sudahLike, setSudahLike] = useState(false);
 
   function tanganiKlikLike() {
-    if (!sudahLike) {
-      setJumlahLike(jumlahLike + 1);
-      setSudahLike(true);
+    const statusBerikutnya = !sudahLike;
+
+    if (statusBerikutnya) {
+      setJumlahLike((likeSebelumnya) => likeSebelumnya + 1);
     } else {
-      setJumlahLike(jumlahLike - 1);
-      setSudahLike(false);
+      setJumlahLike((likeSebelumnya) => Math.max(0, likeSebelumnya - 1));
     }
+
+    setSudahLike(statusBerikutnya);
   }
 
   return (
@@ -42,13 +44,15 @@ export function ProjectLikeButton() {
   const [sudahLike, setSudahLike] = useState(false);
 
   function tanganiKlikLike() {
-    if (!sudahLike) {
-      setJumlahLike(jumlahLike + 1);
-      setSudahLike(true);
+    const statusBerikutnya = !sudahLike;
+
+    if (statusBerikutnya) {
+      setJumlahLike((likeSebelumnya) => likeSebelumnya + 1);
     } else {
-      setJumlahLike(jumlahLike - 1);
-      setSudahLike(false);
+      setJumlahLike((likeSebelumnya) => Math.max(0, likeSebelumnya - 1));
     }
+
+    setSudahLike(statusBerikutnya);
   }
 
   return (
@@ -80,6 +84,7 @@ function ProjectLikeControls({
         {sudahLike ? "Unlike" : "Like"}
       </button>
       <span>{jumlahLike} like</span>
+      <strong>Status: {sudahLike ? "Sudah like" : "Belum like"}</strong>
     </div>
   );
 }
