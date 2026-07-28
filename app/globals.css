@@ -119,6 +119,8 @@ body {
 .inline-like { margin-top: 15px; }
 .project-like button { background: #286bd2; border: 2px solid white; color: white; cursor: pointer; font-family: var(--font-geist-mono), monospace; font-size: .82rem; font-weight: 900; padding: 9px 13px; text-transform: uppercase; transition: transform .18s ease, box-shadow .18s ease; }
 .project-like button:hover, .project-like button:focus-visible { box-shadow: 4px 4px 0 rgba(25,80,109,.35); outline: 3px solid white; outline-offset: 2px; transform: translate(-3px, -3px); }
+.project-like.liked { background: #eaff8f; }
+.project-like.liked button { background: #b33a7d; }
 .project-like:has(button:active) button { background: #bce800; }
 .project-like span, .project-like strong { color: #286bd2; font-family: var(--font-geist-mono), monospace; font-size: .8rem; font-weight: 900; text-transform: uppercase; }
 .project-like strong { background: #e9f8ff; flex-basis: 100%; padding: 6px 8px; }
